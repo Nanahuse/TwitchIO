@@ -958,6 +958,7 @@ class PartialUser:
         game_id: int = None,
         language: str = None,
         title: str = None,
+        tags: List[str] = None,
         content_classification_labels: List[Dict[str, Union[str, bool]]] = None,
         is_branded_content: bool = None,
     ):
@@ -975,6 +976,8 @@ class PartialUser:
             Optional language of the channel. A language value must be either the ISO 639-1 two-letter code for a supported stream language or “other”.
         title: :class:`str`
             Optional title of the stream.
+        tags: :class:`List[str]`
+            Optional tags of the stream.
         content_classification_labels: List[Dict[:class:`str`, Union[:class:`str`, :class:`bool`]]]
             List of labels that should be set as the Channel's CCLs.
         is_branded_content: :class:`bool`
@@ -997,6 +1000,7 @@ class PartialUser:
             game_id=game_id,
             language=language,
             title=title,
+            tags=tags,
             content_classification_labels=content_classification_labels,
             is_branded_content=is_branded_content,
         )

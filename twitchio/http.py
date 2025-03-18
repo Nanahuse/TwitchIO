@@ -768,6 +768,7 @@ class TwitchHTTP:
         game_id: str = None,
         language: str = None,
         title: str = None,
+        tags: List[str] = None,
         content_classification_labels: List[Dict[str, Union[str, bool]]] = None,
         is_branded_content: bool = None,
     ):
@@ -782,6 +783,9 @@ class TwitchHTTP:
             }.items()
             if v is not None
         }
+
+        if tags is not None:
+            body["tags"] = tags
 
         if content_classification_labels is not None:
             body["content_classification_labels"] = content_classification_labels
