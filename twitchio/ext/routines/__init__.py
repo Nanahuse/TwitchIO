@@ -128,9 +128,9 @@ class Routine:
         ----------
         stop_on_error: Optional[bool]
             Whether or not to stop and cancel the routine on error. Defaults to True.
-        \*args
+        *args
             The args to pass to the routine.
-        \*\*kwargs
+        **kwargs
             The kwargs to pass to the routine.
 
         Returns
@@ -190,9 +190,9 @@ class Routine:
             If True the restart will cancel the currently running routine effective immediately and restart.
             If False a graceful stop will occur, which allows the routine to finish it's current iteration.
             Defaults to True.
-        \*args
+        *args
             The args to pass to the routine.
-        \*\*kwargs
+        **kwargs
             The kwargs to pass to the routine.
 
 
